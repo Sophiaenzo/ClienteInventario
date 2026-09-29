@@ -1,0 +1,82 @@
+Checar quantidade bipada para faturamento
+    
+    USU_TSELPAK
+	   USU_CODEMP
+	   USU_CODFIL
+	   USU_NUMPED
+	   USU_PACKLIST
+	   USU_MARCA
+	   USU_PROCES
+	   
+	USU_TSELIPD
+       USU_CODEMP
+	   USU_CODFIL
+	   USU_NUMPED
+	   USU_PACKLIST
+	   USU_CODPRO
+	   USU_SEQIPD
+	   USU_QTDCOL
+	   
+	
+	
+	
+	Botao - mostrar
+	
+	VEN-140CONOR01|167 
+	Pegar numero do pedido informado
+	Verificar se na tabela USU_TSEPIPD se existe mais de um pack por pedido com o campo nf vazio
+	
+	Exclui registros na tabela USU_TSEPIPD com numero de pedido igual a informado
+	Exclui registros na tabela USU_TSELPACK com numero de pedido igual a informado
+		
+	gravar na tabela USU_TSELPACK o numero do pedido e o numero do pack
+	
+	se existir apenas um pack por pedido nao mostra tela para selecionar o pack
+			atualiza o campo USU_MARCA (selecionado) com S
+            nao e apresentado a tela para selecao;		
+	
+	se existir mais de um pack por pedido mostrar tela para selecionar o pack
+		    
+	
+	Botao alterar tela de selecao
+	
+		VEN-140QTFAT01 - 156
+		
+		campos codemp,codfil,numped,seqite - pedidos	
+		
+		soma as quantidades coletadas na tabela USU_TSEPIPD de acordo com os campos chaves da tabela usu_tselpack
+		atualiza o campo USU_MARCADO COM S da tabela USU_SEPIPD
+		inclui na tabela USU_TSELIPD os valores dos campos
+		retorna para a tela F140PRE o valor da quantidade calculado
+		trazendo o campo seleciona ja marcado e a quantidade faturada informada
+			
+	   
+
+
+
+  Botao sair tela selecao
+     Verificar se foi selecionado algum pack
+	 se nao foi mostra mensagem que e obrigatorio selecionar pelo menos 1 pack
+	 nao sendo possivel sair da tela
+	 
+
+	   
+	   
+	   
+	Botao processar
+	   VEN=140ATUSU01 - 163
+	   SE Operacao for igual a cancelar ou excluir
+	   atualizar os campos
+	    USU_CODSNF COM ''
+		usu_numnfv com ''
+		USU_SEQIPV COM ''
+		USU_DATEMI COM ''
+		USU_DATSAI COM ''
+		USU_SITNFV COM ''
+		USU_CODCLI COM ''
+		USU_MARCADO COM ''
+		USU_STACOL COM 2
+		
+		
+	   
+	
