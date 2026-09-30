@@ -1,9 +1,10 @@
 package form;
 
-import Classe.RenderPinta2;
-import Classe.TabelaLista;
 import java.awt.Font;
 import java.util.ArrayList;
+
+import classe.RenderPinta2;
+import classe.TabelaLista;
 import view.*;
 import modelDominio.Te220con;
 import view.tablemodel.TE220conTableModel;

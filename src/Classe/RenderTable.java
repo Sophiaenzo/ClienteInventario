@@ -1,4 +1,4 @@
-package Classe;
+package classe;
 
 import java.awt.Component;
 import javax.swing.JButton;

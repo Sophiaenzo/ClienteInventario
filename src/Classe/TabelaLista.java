@@ -1,4 +1,4 @@
-package Classe;
+package classe;
 
 import java.util.ArrayList;
 import util.Configuracao;

@@ -1,4 +1,4 @@
-package Classe;
+package classe;
 
 import java.awt.Color;
 import java.awt.Component;
